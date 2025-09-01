@@ -1,27 +1,25 @@
 <!--index.wxml-->
-<scroll-view class="scrollarea" scroll-y type="list">
-  <view class="container">
-    <view class="userinfo">
-      <block wx:if="{{canIUseNicknameComp && !hasUserInfo}}">
-        <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
-          <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
-        </button>
-        <view class="nickname-wrapper">
-          <text class="nickname-label">昵称</text>
-          <input type="nickname" class="nickname-input" placeholder="请输入昵称" bind:change="onInputChange" />
-        </view>
-      </block>
-      <block wx:elif="{{!hasUserInfo}}">
-        <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-        <view wx:else> 请使用2.10.4及以上版本基础库 </view>
-      </block>
-      <block wx:else>
-        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-      </block>
-    </view>
-    <view class="usermotto">
-      <text class="user-motto">{{motto}}</text>
-    </view>
+<view>
+  <view class="tab">
+    <view wx:for="{{list}}" wx:key="list" data-index='{{index}}' bindtap="selected">{{item}}</view>
   </view>
-</scroll-view>
+
+  <!-- tab1  -->
+  <view wx:if="{{selected == 0}}">
+    <swiper indicator-dots="true">
+      <swiper-item style="background-color: #00ff00;">
+        <view>123</view>
+      </swiper-item>
+      <swiper-item style="background-color: #ff0000;">
+        <view>456</view>
+      </swiper-item>
+      <swiper-item style="background-color: #0000ff;">
+        <view>789</view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- tab2 -->
+  <view wx:if="{{selected == 1}}">内容2</view>
+  <!-- tab3 -->
+  <view wx:if="{{selected == 2}}">内容3</view>
+</view>

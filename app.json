@@ -1,8 +1,34 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/car/index",
+    "pages/map/index",
+    "pages/my/index"
   ],
+  "subPackages": [
+    {
+      "root": "pages/carList",
+      "pages": [
+        "pages/car1/car1"
+      ]
+    }
+  ],
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/car/index",
+      "text": "看车"
+    }, {
+      "pagePath": "pages/map/index",
+      "text": "地图"
+    }, {
+      "pagePath": "pages/my/index",
+      "text": "我的"
+    }]
+  },
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "Weixin",
