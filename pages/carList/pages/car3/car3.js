@@ -1,4 +1,4 @@
-// pages/my/index.js
+// pages/carList/pages/car3/car3.js
 Page({
 
   /**
@@ -62,16 +62,5 @@ Page({
    */
   onShareAppMessage() {
 
-  },
-
-  login(e) {
-    console.log(e)
-    // 从这里取到 iv 和 encryptedData
-    wx.login({
-      success: (res) => {
-        console.log(res)
-        // 这里取到wxcode
-      },
-    })
   }
 })
