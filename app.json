@@ -10,7 +10,9 @@
     {
       "root": "pages/carList",
       "pages": [
-        "pages/car1/car1"
+        "pages/car1/car1",
+        "pages/car2/car2",
+        "pages/car3/car3"
       ]
     }
   ],

@@ -1,2 +1,3 @@
 <!--pages/my/index.wxml-->
-<text>pages/my/index.wxml</text>
+<button bindtap="login">登录</button>
+<button bindgetphonenumber="login" open-type="getPhoneNumber">获取手机号</button>

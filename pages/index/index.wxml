@@ -7,13 +7,13 @@
   <!-- tab1  -->
   <view wx:if="{{selected == 0}}">
     <swiper indicator-dots="true">
-      <swiper-item style="background-color: #00ff00;">
+      <swiper-item style="background-color: #00ff00;" bindtap="itemOneClick">
         <view>123</view>
       </swiper-item>
-      <swiper-item style="background-color: #ff0000;">
+      <swiper-item style="background-color: #ff0000;" bindtap="itemTwoClick">
         <view>456</view>
       </swiper-item>
-      <swiper-item style="background-color: #0000ff;">
+      <swiper-item style="background-color: #0000ff;" bindtap="itemThreeClick">
         <view>789</view>
       </swiper-item>
     </swiper>
